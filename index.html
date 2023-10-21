@@ -43,19 +43,19 @@
     <div>
       <!-- navbar -->
       <header>
-        <div class="container">
-          <div
-            class="py-3 md:py-[39px] mx-auto items-center flex justify-between"
-          >
-            <div class="flex justify-between items-center w-full relative z-20">
+        <div class="max-w-[1243px] mx-auto px-3">
+          <div class="py-[20px] mx-auto items-center flex justify-between">
+            <div
+              class="flex justify-between w-full lg:w-[200px] items-center relative z-20"
+            >
               <img
-                class="cursor-pointer"
+                class="cursor-pointer max-w-[170px] sm:max-w-[200px]"
                 src="./assets/images/svg/Logo.svg"
                 alt="logo"
               />
               <button
                 onclick="show()"
-                class="md:hidden absolute end-0 text-white"
+                class="lg:hidden absolute end-0 text-white"
               >
                 <svg
                   width="24"
@@ -67,48 +67,69 @@
                   <g clip-path="url(#clip0_3942_2072)">
                     <path
                       d="M3 4.5H21V6.5H3V4.5ZM3 11.5H21V13.5H3V11.5ZM3 18.5H21V20.5H3V18.5Z"
-                      fill="white"
+                      fill="black"
                     />
                   </g>
                 </svg>
               </button>
             </div>
             <ul
-              class="md:flex font-semibold flex gap-5 md:gap-0 md:flex-row bg-black md:bg-transparent min-h-screen md:min-h-fit justify-center items-center w-full md:relative z-20 fixed left-[-100%] md:start-0 top-0 flex-col h-full ps-0 transition-all duration-300 ease-linear"
+              class="md:flex flex gap-5 max-[1024px]:w-full lg:gap-0 lg:flex-row bg-white min-h-screen md:min-h-fit justify-center items-center lg:relative z-20 fixed left-[-100%] lg:start-0 top-0 flex-col h-full ps-0 transition-all duration-300 ease-linear"
               id="navMenu"
             >
-              <li>
+              <li class="">
                 <a
                   onclick="hide()"
                   href="#about"
-                  class="ff_inter opacity-[.7] hover:opacity-[1] duration-300 text-xs font-medium leading-[150%] text-white"
-                  >About</a
+                  class="text-[#111] ff_plus font-semibold text-xs leading-[150%] hover:border-b-[3px] duration-300 pb-[7px] hover:border-[#111]"
+                  >PARTICIPANTS</a
                 >
               </li>
-              <li class="lg:mx-[32px] mx-[25px]">
+              <li class="lg:ms-[25px] xl:ms-[36px]">
                 <a
                   onclick="hide()"
                   href="#howitworks"
-                  class="ff_inter opacity-[.7] hover:opacity-[1] duration-300 text-xs font-medium leading-[150%] text-white"
-                  >How it Works</a
+                  class="text-[#111] ff_plus font-semibold text-xs leading-[150%] hover:border-b-[3px] duration-300 pb-[7px] hover:border-[#111]"
+                  >AGENDA</a
                 >
               </li>
-              <li>
+              <li class="lg:ms-[25px] xl:ms-[36px]">
                 <a
                   onclick="hide()"
                   href="#blog"
-                  class="ff_inter opacity-[.7] hover:opacity-[1] duration-300 text-xs font-medium leading-[150%] text-white"
-                  >Blog</a
+                  class="text-[#111] ff_plus font-semibold text-xs leading-[150%] hover:border-b-[3px] duration-300 pb-[7px] hover:border-[#111]"
+                  >SPEAKERS</a
                 >
               </li>
-              <span
-                class="ff_manrope md:hidden mb-0 pb-[12px] cursor-pointer text-white font-bold leading-[170%] border-b-[1px] border-solid border-[white]"
+              <li class="lg:ms-[25px] xl:ms-[36px]">
+                <a
+                  onclick="hide()"
+                  href="#blog"
+                  class="text-[#111] ff_plus font-semibold text-xs leading-[150%] hover:border-b-[3px] duration-300 pb-[7px] hover:border-[#111]"
+                  >FAQ</a
+                >
+              </li>
+              <li class="lg:ms-[25px] xl:ms-[36px] lg:me-[40px] xl:me-[66px]">
+                <a
+                  onclick="hide()"
+                  href="#blog"
+                  class="text-[#111] ff_plus font-semibold text-xs leading-[150%] hover:border-b-[3px] duration-300 pb-[7px] hover:border-[#111]"
+                  >LOGIN</a
+                >
+              </li>
+              <button
+                class="border-solid lg:me-[20px] h-[44px] ff_plus font-extrabold text-xs leading-[150%] text-[#111] border-[1px] border-[#111] px-[32px]"
               >
-                How much is my app worth?
-              </span>
+                EXHIBIT
+              </button>
+              <button
+                class="button_bg_linear width-[164px] h-[44px] ff_plus font-extrabold text-xs leading-[150%] text-white px-[32px]"
+              >
+                GET TICKETS
+              </button>
               <button
                 onclick="hide()"
-                class="absolute md:hidden top-[15px] right-[20px]"
+                class="absolute lg:hidden top-[15px] right-[20px]"
               >
                 <svg
                   width="40"
@@ -119,21 +140,15 @@
                 >
                   <path
                     d="M25.9846 11.6665L20.0013 17.6498L14.018 11.6665L11.668 14.0165L17.6513 19.9998L11.668 25.9832L14.018 28.3332L20.0013 22.3498L25.9846 28.3332L28.3346 25.9832L22.3513 19.9998L28.3346 14.0165L25.9846 11.6665Z"
-                    fill="white"
+                    fill="black"
                   />
                 </svg>
               </button>
             </ul>
-            <div class="w-full text-end hidden md:block ps-4">
-              <span
-                class="ff_manrope mb-0 pb-[12px] px-2 cursor-pointer text-white font-bold leading-[170%] border-b-[1px] border-solid border-[white]"
-              >
-                How much is my app worth?
-              </span>
-            </div>
           </div>
         </div>
       </header>
+      
     </div>
     <script>
       function show() {

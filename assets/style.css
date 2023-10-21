@@ -7,3 +7,7 @@
 .ff_barlow {
     font-family: 'Barlow Condensed', sans-serif;
 }
+
+.button_bg_linear {
+    background: var(--Button-Linear, linear-gradient(248deg, #B80FB6 -51.42%, #553581 66.54%));
+}
