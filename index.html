@@ -39,5 +39,112 @@
       };
     </script>
   </head>
-  <body></body>
+  <body>
+    <div>
+      <!-- navbar -->
+      <header>
+        <div class="container">
+          <div
+            class="py-3 md:py-[39px] mx-auto items-center flex justify-between"
+          >
+            <div class="flex justify-between items-center w-full relative z-20">
+              <img
+                class="cursor-pointer"
+                src="./assets/images/svg/Logo.svg"
+                alt="logo"
+              />
+              <button
+                onclick="show()"
+                class="md:hidden absolute end-0 text-white"
+              >
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_3942_2072)">
+                    <path
+                      d="M3 4.5H21V6.5H3V4.5ZM3 11.5H21V13.5H3V11.5ZM3 18.5H21V20.5H3V18.5Z"
+                      fill="white"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+            <ul
+              class="md:flex font-semibold flex gap-5 md:gap-0 md:flex-row bg-black md:bg-transparent min-h-screen md:min-h-fit justify-center items-center w-full md:relative z-20 fixed left-[-100%] md:start-0 top-0 flex-col h-full ps-0 transition-all duration-300 ease-linear"
+              id="navMenu"
+            >
+              <li>
+                <a
+                  onclick="hide()"
+                  href="#about"
+                  class="ff_inter opacity-[.7] hover:opacity-[1] duration-300 text-xs font-medium leading-[150%] text-white"
+                  >About</a
+                >
+              </li>
+              <li class="lg:mx-[32px] mx-[25px]">
+                <a
+                  onclick="hide()"
+                  href="#howitworks"
+                  class="ff_inter opacity-[.7] hover:opacity-[1] duration-300 text-xs font-medium leading-[150%] text-white"
+                  >How it Works</a
+                >
+              </li>
+              <li>
+                <a
+                  onclick="hide()"
+                  href="#blog"
+                  class="ff_inter opacity-[.7] hover:opacity-[1] duration-300 text-xs font-medium leading-[150%] text-white"
+                  >Blog</a
+                >
+              </li>
+              <span
+                class="ff_manrope md:hidden mb-0 pb-[12px] cursor-pointer text-white font-bold leading-[170%] border-b-[1px] border-solid border-[white]"
+              >
+                How much is my app worth?
+              </span>
+              <button
+                onclick="hide()"
+                class="absolute md:hidden top-[15px] right-[20px]"
+              >
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M25.9846 11.6665L20.0013 17.6498L14.018 11.6665L11.668 14.0165L17.6513 19.9998L11.668 25.9832L14.018 28.3332L20.0013 22.3498L25.9846 28.3332L28.3346 25.9832L22.3513 19.9998L28.3346 14.0165L25.9846 11.6665Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </ul>
+            <div class="w-full text-end hidden md:block ps-4">
+              <span
+                class="ff_manrope mb-0 pb-[12px] px-2 cursor-pointer text-white font-bold leading-[170%] border-b-[1px] border-solid border-[white]"
+              >
+                How much is my app worth?
+              </span>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <script>
+      function show() {
+        document.getElementById("navMenu").classList.add("!start-0");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      function hide() {
+        document.getElementById("navMenu").classList.remove("!start-0");
+        document.body.classList.remove("overflow-hidden");
+      }
+    </script>
+  </body>
 </html>
