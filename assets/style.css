@@ -16,8 +16,23 @@
     background: #FFF;
     box-shadow: -4px 17px 39px 0px rgba(0, 0, 0, 0.12);
 }
-.bg_sec4bg{
+
+.bg_sec4bg {
     background-image: url(./images/png/bglines.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+.icon_shadow {
+    box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.06);
+}
+
+.bg_blur {
+    background: rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(50px);
+}
+
+.bg_linear {
+    background: rgba(17, 17, 17, 0.50);
+    backdrop-filter: blur(11.5px);
 }
