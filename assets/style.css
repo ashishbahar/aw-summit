@@ -16,8 +16,44 @@
     background: #FFF;
     box-shadow: -4px 17px 39px 0px rgba(0, 0, 0, 0.12);
 }
-.bg_sec4bg{
+
+.bg_sec4bg {
     background-image: url(./images/png/bglines.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1 !important;
+    /* color: black; */
+    width: 20px !important;
+    height: 8px !important;
+    border-radius: 41px !important;
+    background: var(--Button-Linear, linear-gradient(248deg, #B80FB6 -51.42%, #553581 66.54%)) !important;
+}
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    width: 12px !important;
+    height: 8px !important;
+    border-radius: 41px !important;
+    background: linear-gradient(248deg, rgba(184, 15, 182, 0.50) -51.42%, rgba(85, 53, 129, 0.50) 66.54%) !important;
+    left: 0;
+    content: '' !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-top: 40px !important;
+}
+
+.rounded_bg {
+    border-radius: 306px;
+    opacity: 0.19 !important;
+    filter: blur(25px);
+    background: var(--Button-Linear, linear-gradient(248deg, #B80FB6 -51.42%, #553581 66.54%));
+
 }
