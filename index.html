@@ -34,6 +34,24 @@
               "3xl": "56px",
               "4xl": "64px",
             },
+            backgroundImage: {
+              hero: "url('./assets/images/png/Herosec.png')",
+              bangkok: "url('./assets/images/png/sec3bg.png')",
+            },
+            animation: {
+              marquee: "marquee 25s linear infinite",
+              marquee2: "marquee2 25s linear infinite",
+            },
+            keyframes: {
+              marquee: {
+                "0%": { transform: "translateX(0%)" },
+                "100%": { transform: "translateX(-100%)" },
+              },
+              marquee2: {
+                "0%": { transform: "translateX(100%)" },
+                "100%": { transform: "translateX(0%)" },
+              },
+            },
           },
         },
       };
@@ -43,19 +61,19 @@
     <div>
       <!-- navbar -->
       <header>
-        <div class="container">
-          <div
-            class="py-3 md:py-[39px] mx-auto items-center flex justify-between"
-          >
-            <div class="flex justify-between items-center w-full relative z-20">
+        <div class="max-w-[1243px] mx-auto px-3">
+          <div class="py-[20px] mx-auto items-center flex justify-between">
+            <div
+              class="flex justify-between w-full lg:w-[200px] items-center relative z-20"
+            >
               <img
-                class="cursor-pointer"
+                class="cursor-pointer max-w-[170px] sm:max-w-[200px]"
                 src="./assets/images/svg/Logo.svg"
                 alt="logo"
               />
               <button
                 onclick="show()"
-                class="md:hidden absolute end-0 text-white"
+                class="lg:hidden absolute end-0 text-white"
               >
                 <svg
                   width="24"
@@ -67,48 +85,69 @@
                   <g clip-path="url(#clip0_3942_2072)">
                     <path
                       d="M3 4.5H21V6.5H3V4.5ZM3 11.5H21V13.5H3V11.5ZM3 18.5H21V20.5H3V18.5Z"
-                      fill="white"
+                      fill="black"
                     />
                   </g>
                 </svg>
               </button>
             </div>
             <ul
-              class="md:flex font-semibold flex gap-5 md:gap-0 md:flex-row bg-black md:bg-transparent min-h-screen md:min-h-fit justify-center items-center w-full md:relative z-20 fixed left-[-100%] md:start-0 top-0 flex-col h-full ps-0 transition-all duration-300 ease-linear"
+              class="md:flex flex gap-5 max-[1024px]:w-full lg:gap-0 lg:flex-row bg-white min-h-screen md:min-h-fit justify-center items-center lg:relative z-20 fixed left-[-100%] lg:start-0 top-0 flex-col h-full ps-0 transition-all duration-300 ease-linear"
               id="navMenu"
             >
-              <li>
+              <li class="">
                 <a
                   onclick="hide()"
                   href="#about"
-                  class="ff_inter opacity-[.7] hover:opacity-[1] duration-300 text-xs font-medium leading-[150%] text-white"
-                  >About</a
+                  class="text-[#111] ff_plus font-semibold text-xs leading-[150%] hover:border-b-[3px] duration-300 pb-[7px] hover:border-[#111]"
+                  >PARTICIPANTS</a
                 >
               </li>
-              <li class="lg:mx-[32px] mx-[25px]">
+              <li class="lg:ms-[25px] xl:ms-[36px]">
                 <a
                   onclick="hide()"
                   href="#howitworks"
-                  class="ff_inter opacity-[.7] hover:opacity-[1] duration-300 text-xs font-medium leading-[150%] text-white"
-                  >How it Works</a
+                  class="text-[#111] ff_plus font-semibold text-xs leading-[150%] hover:border-b-[3px] duration-300 pb-[7px] hover:border-[#111]"
+                  >AGENDA</a
                 >
               </li>
-              <li>
+              <li class="lg:ms-[25px] xl:ms-[36px]">
                 <a
                   onclick="hide()"
                   href="#blog"
-                  class="ff_inter opacity-[.7] hover:opacity-[1] duration-300 text-xs font-medium leading-[150%] text-white"
-                  >Blog</a
+                  class="text-[#111] ff_plus font-semibold text-xs leading-[150%] hover:border-b-[3px] duration-300 pb-[7px] hover:border-[#111]"
+                  >SPEAKERS</a
                 >
               </li>
-              <span
-                class="ff_manrope md:hidden mb-0 pb-[12px] cursor-pointer text-white font-bold leading-[170%] border-b-[1px] border-solid border-[white]"
+              <li class="lg:ms-[25px] xl:ms-[36px]">
+                <a
+                  onclick="hide()"
+                  href="#blog"
+                  class="text-[#111] ff_plus font-semibold text-xs leading-[150%] hover:border-b-[3px] duration-300 pb-[7px] hover:border-[#111]"
+                  >FAQ</a
+                >
+              </li>
+              <li class="lg:ms-[25px] xl:ms-[36px] lg:me-[40px] xl:me-[66px]">
+                <a
+                  onclick="hide()"
+                  href="#blog"
+                  class="text-[#111] ff_plus font-semibold text-xs leading-[150%] hover:border-b-[3px] duration-300 pb-[7px] hover:border-[#111]"
+                  >LOGIN</a
+                >
+              </li>
+              <button
+                class="border-solid lg:me-[20px] h-[44px] ff_plus font-extrabold text-xs leading-[150%] text-[#111] border-[1px] border-[#111] px-[32px]"
               >
-                How much is my app worth?
-              </span>
+                EXHIBIT
+              </button>
+              <button
+                class="button_bg_linear width-[164px] h-[44px] ff_plus font-extrabold text-xs leading-[150%] text-white px-[32px]"
+              >
+                GET TICKETS
+              </button>
               <button
                 onclick="hide()"
-                class="absolute md:hidden top-[15px] right-[20px]"
+                class="absolute lg:hidden top-[15px] right-[20px]"
               >
                 <svg
                   width="40"
@@ -119,21 +158,212 @@
                 >
                   <path
                     d="M25.9846 11.6665L20.0013 17.6498L14.018 11.6665L11.668 14.0165L17.6513 19.9998L11.668 25.9832L14.018 28.3332L20.0013 22.3498L25.9846 28.3332L28.3346 25.9832L22.3513 19.9998L28.3346 14.0165L25.9846 11.6665Z"
-                    fill="white"
+                    fill="black"
                   />
                 </svg>
               </button>
             </ul>
-            <div class="w-full text-end hidden md:block ps-4">
-              <span
-                class="ff_manrope mb-0 pb-[12px] px-2 cursor-pointer text-white font-bold leading-[170%] border-b-[1px] border-solid border-[white]"
-              >
-                How much is my app worth?
-              </span>
-            </div>
           </div>
         </div>
       </header>
+      <!-- herosec -->
+      <div class="bg-hero bg-cover py-[142px]">
+        <h1
+          class="ff_barlow font-bold leading-[110%] text-white text-center text-[40px] sm: text-sm"
+        >
+          OUR EXCLUSIVE DINNERS
+        </h1>
+        <p
+          class="ff_plus font-medium leading-[150%] text-white text-center text-[20px] sm:text-xl"
+        >
+          Where networking meets excellence
+        </p>
+      </div>
+      <section>
+        <!-- About -->
+        <div class="lg:py-[120px] py-[50px]">
+          <div class="container">
+            <div
+              class="flex lg:flex-row flex-col-reverse flex-wrap items-center"
+            >
+              <div class="lg:w-[50%] lg:pe-[12px] lg:pt-0 pt-[24px]">
+                <h1
+                  class="ff_barlow text-2xl font-semibold mb-0 leading-[120%]"
+                >
+                  ABOUT THE EVENT
+                </h1>
+                <p
+                  class="ff_plus text-xs xl:text-md font-normal leading-[140%] text-[#111] opacity-[0.7] xl:pt-[33px] pt-[18px] mb-0"
+                >
+                  From Bangkok to Dubai, Barcelona, Cascais, and beyond,
+                  AWSummit's Exclusive Dinners Concept goes to 7 countries,
+                  promising an excellent networking experience that combines the
+                  art of fine dining with the magic of meaningful connections.
+                </p>
+                <p
+                  class="ff_plus text-xs xl:text-md font-normal leading-[140%] text-[#111] opacity-[0.7] xl:pt-[24px] pt-[16px]"
+                >
+                  We bring together the finest minds in the industry, top-tier
+                  leaders, and affiliates for an intimate gathering that goes
+                  beyond traditional networking, where conversations are more
+                  than just exchanges of business cards – they are the
+                  foundation for thriving partnerships. This is an opportunity
+                  to share a glass of wine, savor delicious cuisine, and craft
+                  relationships that will drive your business to new heights.
+                </p>
+              </div>
+              <div class="lg:w-[50%] md:w-[80%] lg:ps-[12px] mt-[10px] xl:mt-0">
+                <div class="flex-wrap flex">
+                  <div class="w-[50%] pe-[12px] max-[530px]:pe-[8px]">
+                    <img
+                      class="w-full"
+                      src="./assets/images/png/cook.png"
+                      alt="cook"
+                    />
+                  </div>
+                  <div class="w-[50%] ps-[12px] max-[530px]:ps-[8px]">
+                    <img
+                      class="w-full"
+                      src="./assets/images/png/dinner.png"
+                      alt="cook"
+                    />
+                  </div>
+                  <div
+                    class="w-[50%] pe-[12px] pt-[24px] max-[530px]:pt-[16px] max-[530px]:pe-[8px]"
+                  >
+                    <img
+                      class="w-full"
+                      src="./assets/images/png/dinner2.png"
+                      alt="cook"
+                    />
+                  </div>
+                  <div
+                    class="w-[50%] ps-[12px] pt-[24px] max-[530px]:ps-[8px] max-[530px]:pt-[16px]"
+                  >
+                    <img
+                      class="w-full"
+                      src="./assets/images/png/drink.png"
+                      alt="cook"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARDS----- -->
+        <div>
+          <div class="container">
+            <div class="flex flex-row flex-wrap"></div>
+          </div>
+        </div>
+      </section>
+      <!-- //////////////////////////////     \\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+      <section class="bg-bangkok bg-cover bg-no-repeat">
+        <div class="container py-[70px] md:py-32">
+          <div class="text-center">
+            <h2
+              class="ff_barlow sm:text-3xl text-[40px] text-white font-semibold leading-[120%]"
+            >
+              AWSUMMIT BANGKOK
+            </h2>
+            <p
+              class="ff_barlow mt-[16px] sm:mt-[24px] text-[22px] sm:text-1xl leading-[135%] text-white font-semibold"
+            >
+              Pastel Rooftop bar & Mediterranean Dining
+            </p>
+            <div class="flex items-center justify-center my-[16px]">
+              <img src="./assets/images/svg/mdi_location.svg" alt="location" />
+              <p
+                class="ff_plus max-[374px]:text-start ms-[12px] text-[15px] sm:text-lg font-medium leading-[125%] text-white"
+              >
+                Aira Hotel - 22nd floor, 14 Soi Sukhumvit 11
+              </p>
+            </div>
+            <div class="flex justify-center">
+              <div class="flex items-center">
+                <div>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 19C2 20.7 3.3 22 5 22H19C20.7 22 22 20.7 22 19V11H2V19ZM19 4H17V3C17 2.4 16.6 2 16 2C15.4 2 15 2.4 15 3V4H9V3C9 2.4 8.6 2 8 2C7.4 2 7 2.4 7 3V4H5C3.3 4 2 5.3 2 7V9H22V7C22 5.3 20.7 4 19 4Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="ff_plus ms-[12px] text-[15px] sm:text-lg font-medium leading-[125%] text-white"
+                >
+                  December 8th
+                </p>
+              </div>
+              <div class="flex items-center ms-[25px] sm:ms-[30px]">
+                <div>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM13 12V7H11V14H17V12H13Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="ff_plus ms-[12px] text-[15px] sm:text-lg font-medium leading-[125%] text-white"
+                >
+                  Time : TBA
+                </p>
+              </div>
+            </div>
+            <button
+              class="button_bg_linear mt-[40px] sm:mt-[48px] h-[46px] ff_plus font-semibold text-[20px] sm:text-lg leading-[120%] text-white px-[32px]"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- ////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+      <!-- social icon  -->
+      <!-- <div>
+        <div class="max-w-[1225px] mx-auto">
+          <div class="relative flex overflow-hidden">
+            <div class="py-12 animate-marquee whitespace-nowrap">
+              <div class="w-[200px] text-sm mx-4">
+                <img
+                  class="w-full"
+                  src="./assets/images/png/social2.png"
+                  alt=""
+                />
+              </div>
+              <div class="w-[200px] text-sm mx-4">Marquee Item 2</div>
+              <div class="w-[200px] text-sm mx-4">Marquee Item 3</div>
+              <div class="w-[200px] text-sm mx-4">Marquee Item 4</div>
+              <div class="w-[200px] text-sm mx-4">Marquee Item 5</div>
+            </div>
+
+            <div
+              class="absolute top-0 py-12 animate-marquee2 whitespace-nowrap"
+            >
+              <div class="w-[200px] text-sm mx-4">Marquee Item 1</div>
+              <div class="w-[200px] text-sm mx-4">Marquee Item 2</div>
+              <div class="w-[200px] text-sm mx-4">Marquee Item 3</div>
+              <div class="w-[200px] text-sm mx-4">Marquee Item 4</div>
+              <div class="w-[200px] text-sm mx-4">Marquee Item 5</div>
+            </div>
+          </div>
+        </div>
+      </div> -->
     </div>
     <script>
       function show() {
