@@ -7,3 +7,17 @@
 .ff_barlow {
     font-family: 'Barlow Condensed', sans-serif;
 }
+
+.button_bg_linear {
+    background: var(--Button-Linear, linear-gradient(248deg, #B80FB6 -51.42%, #553581 66.54%));
+}
+
+.boxshadow_white {
+    background: #FFF;
+    box-shadow: -4px 17px 39px 0px rgba(0, 0, 0, 0.12);
+}
+.bg_sec4bg{
+    background-image: url(./images/png/bglines.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
