@@ -9,6 +9,7 @@
       href="./assets/images/png/fav.png"
       type="image/x-icon"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Aw summit</title>
     <link
       rel="stylesheet"
@@ -69,7 +70,31 @@
       };
     </script>
   </head>
-  <body>
+  <body class="overflow-hidden">
+    <!-- preloader -->
+    <div
+      class="min-h-screen w-full top-0 left-0 bg-white flex items-center justify-center fixed z-[100]"
+      id="pre-loader"
+    >
+      <img class="animation" src="assets/images/svg/Logo.svg" alt="logo" />
+    </div>
+    <!-- back to top -->
+    <button
+      onclick="backToTop()"
+      class="fixed bottom-0 right-0 mb-6 mr-6 z-[99] bg-gradient-to-r from-[#B80FB6] to-[#553581] p-4 rounded-[50px]"
+      id="topBtn"
+    >
+      <svg width="20" height="20" fill="white" viewBox="0 0 16 16">
+        <path
+          fillRule="evenodd"
+          d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"
+        ></path>
+        <path
+          fillRule="evenodd"
+          d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"
+        ></path>
+      </svg>
+    </button>
     <div>
       <!-- navbar -->
       <header>
@@ -79,7 +104,7 @@
               class="flex justify-between w-full lg:w-[137px] items-center relative z-20"
             >
               <img
-                class="cursor-pointer max-w-[170px] sm:max-w-[137px]"
+                class="cursor-pointer xl:max-w-[200px] max-w-[160px]"
                 src="./assets/images/svg/Logo.svg"
                 alt="logo"
               />
@@ -198,7 +223,10 @@
             <div
               class="flex lg:flex-row flex-col-reverse flex-wrap items-center"
             >
-              <div class="lg:w-[50%] lg:pe-[12px] lg:pt-0 pt-[24px]">
+              <div
+                data-aos="fade-right"
+                class="lg:w-[50%] lg:pe-[12px] lg:pt-0 pt-[24px]"
+              >
                 <h1
                   class="ff_barlow text-2xl font-semibold mb-0 leading-[120%]"
                 >
@@ -224,7 +252,10 @@
                   relationships that will drive your business to new heights.
                 </p>
               </div>
-              <div class="lg:w-[50%] md:w-[80%] lg:ps-[12px] mt-[10px] xl:mt-0">
+              <div
+                data-aos="fade-left"
+                class="lg:w-[50%] md:w-[80%] lg:ps-[12px] mt-[10px] xl:mt-0"
+              >
                 <div class="flex-wrap flex">
                   <div class="w-[50%] pe-[12px] max-[530px]:pe-[8px]">
                     <img
@@ -274,7 +305,7 @@
       <!-- //////////////////////////////     \\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
       <section class="bg-bangkok bg-cover bg-no-repeat">
         <div class="container py-[70px] md:py-32">
-          <div class="text-center">
+          <div data-aos="fade-up" class="text-center">
             <h2
               class="ff_barlow sm:text-3xl text-[40px] text-white font-semibold leading-[120%]"
             >
@@ -347,82 +378,74 @@
       </section>
       <!-- ////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
       <!-- social icon  -->
-      <div class="icon_shadow bg-white">
-        <div class="max-w-[1225px] mx-auto">
-          <div class="relative flex overflow-hidden">
-            <div class="py-12 animate-marquee whitespace-nowrap">
-              <span class="sm:mx-[60px] mx-[30px]">
-                <img
-                  class="w-[137px] inline hover:scale-[1.1] duration-300 cursor-pointer"
-                  src="./assets/images/png/social1.png"
-                  alt="social icon"
-                />
-              </span>
-              <span class="sm:mx-[60px] mx-[30px]">
-                <img
-                  class="w-[137px] inline hover:scale-[1.1] duration-300 cursor-pointer"
-                  src="./assets/images/png/social2.png"
-                  alt="social icon"
-              /></span>
-              <span class="sm:mx-[60px] mx-[30px]">
-                <img
-                  class="w-[137px] inline hover:scale-[1.1] duration-300 cursor-pointer"
-                  src="./assets/images/png/social3.png"
-                  alt="social icon"
-              /></span>
-              <span class="sm:mx-[60px] mx-[30px]">
-                <img
-                  class="w-[137px] inline hover:scale-[1.1] duration-300 cursor-pointer"
-                  src="./assets/images/png/social4.png"
-                  alt="social icon"
-              /></span>
-              <span class="sm:mx-[60px] mx-[30px]">
-                <img
-                  class="w-[137px] inline hover:scale-[1.1] duration-300 cursor-pointer"
-                  src="./assets/images/png/social5.png"
-                  alt="social icon"
-              /></span>
+      <div data-aos="fade-right" class="icon_shadow bg-white">
+        <div class="max-w-[1225px] mx-auto py-[28px]">
+          <div class="responsivesocial">
+            <div class="">
+              <div class="max-w-[135px] max-[576px]:max-w-[130px]">
+                <div>
+                  <img
+                    class="w-full hover:scale-[1.03] cursor-pointer duration-300"
+                    src="./assets/images/png/img1.png"
+                    alt="img1"
+                  />
+                </div>
+              </div>
             </div>
-
-            <div class="top-0 py-12 animate-marquee2 whitespace-nowrap">
-              <span class="sm:mx-[60px] sm:ps-[50px] mx-[30px]">
-                <img
-                  class="w-[137px] inline hover:scale-[1.1] duration-300 cursor-pointer"
-                  src="./assets/images/png/social1.png"
-                  alt="social icon"
-                />
-              </span>
-              <span class="sm:mx-[60px] mx-[30px]">
-                <img
-                  class="w-[137px] inline hover:scale-[1.1] duration-300 cursor-pointer"
-                  src="./assets/images/png/social2.png"
-                  alt="social icon"
-              /></span>
-              <span class="sm:mx-[60px] mx-[30px]">
-                <img
-                  class="w-[137px] inline hover:scale-[1.1] duration-300 cursor-pointer"
-                  src="./assets/images/png/social3.png"
-                  alt="social icon"
-              /></span>
-              <span class="sm:mx-[60px] mx-[30px]">
-                <img
-                  class="w-[137px] inline hover:scale-[1.1] duration-300 cursor-pointer"
-                  src="./assets/images/png/social4.png"
-                  alt="social icon"
-              /></span>
-              <span class="sm:mx-[60px] mx-[30px]">
-                <img
-                  class="w-[137px] inline hover:scale-[1.1] duration-300 cursor-pointer"
-                  src="./assets/images/png/social5.png"
-                  alt="social icon"
-              /></span>
+            <div class="">
+              <div class="max-w-[135px] max-[576px]:max-w-[130px]">
+                <div>
+                  <img
+                    class="w-full hover:scale-[1.03] cursor-pointer duration-300"
+                    src="./assets/images/png/social2.png"
+                    alt="img1"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="max-w-[135px] max-[576px]:max-w-[130px]">
+                <div>
+                  <img
+                    class="w-full hover:scale-[1.03] cursor-pointer duration-300"
+                    src="./assets/images/png/social3.png"
+                    alt="img1"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="max-w-[135px] max-[576px]:max-w-[130px]">
+                <div>
+                  <img
+                    class="w-full hover:scale-[1.03] cursor-pointer duration-300"
+                    src="./assets/images/png/social4.png"
+                    alt="img1"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="max-w-[135px] max-[576px]:max-w-[130px]">
+                <div>
+                  <img
+                    class="w-full hover:scale-[1.03] cursor-pointer duration-300"
+                    src="./assets/images/png/social5.png"
+                    alt="img1"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="py-[160px]">
+
+      <div class="py-[70px] sm:py-[160px]">
         <div class="container">
-          <div class="flex flex-row flex-wrap justify-center">
+          <div
+            data-aos="fade-down"
+            class="flex flex-row flex-wrap justify-center"
+          >
             <div
               class="xl:w-[25%] lg:w-[33.33%] sm:w-[50%] max-[500px]:w-[95%] w-[70%] px-[12px]"
             >
@@ -740,6 +763,7 @@
           </h2>
         </div>
         <div
+          data-aos="flip-left"
           class="lg:max-w-[964px] max-w-[765px] pt-[40px] md:pt-[54px] mx-auto flex flex-wrap"
         >
           <div
@@ -900,7 +924,10 @@
         </div>
         <div class="container pt-[69px]">
           <div class="flex flex-wrap flex-row">
-            <div class="sm:w-[50%] w-[100%] px-[12px] relative z-10">
+            <div
+              data-aos="fade-right"
+              class="sm:w-[50%] w-[100%] px-[12px] relative z-10"
+            >
               <div class="boxshadow_white text-center py-[30px] px-[20px]">
                 <h1
                   class="ff_barlow md:text-2xl sm:text-[30px] text-[26px] font-semibold leading-[140%]"
@@ -915,6 +942,7 @@
               </div>
             </div>
             <div
+              data-aos="fade-left"
               class="sm:w-[50%] w-[100%] sm:mt-[0] mt-[24px] px-[12px] relative z-10"
             >
               <div class="boxshadow_white text-center py-[30px] px-[20px]">
@@ -933,7 +961,9 @@
           </div>
         </div>
       </div>
-      <div class="pb-[80px] relative">
+      <div
+        class="pb-[80px] lg:pt-[50px] lg:pb-[120px] mt-[60px] lg:mt-0 relative"
+      >
         <div
           class="h-[306px] w-[306px] rounded-[50%] rounded_bg opacity-[0.7] absolute end-[30px] top-[70px]"
         ></div>
@@ -943,7 +973,7 @@
           >
             AWSUMMIT DINNERS SPONSORS
           </h1>
-          <div class="responsive">
+          <div data-aos="fade-down" class="responsive">
             <div class="">
               <div class="max-w-[195px] max-[576px]:max-w-[130px]">
                 <div>
@@ -1171,6 +1201,7 @@
       <div class="bg-nevermiss sm:py-[106px] pt-[50px] bg-cover bg-no-repeat">
         <div class="container">
           <div
+            data-aos="flip-right"
             class="text-center bg_linear sm:px-[58px] px-[30px] pb-[58px] pt-[27px]"
           >
             <h2
@@ -1397,6 +1428,11 @@
       </footer>
     </div>
     <script>
+      setTimeout(() => {
+        document.body.classList.remove("overflow-hidden");
+        document.getElementById("pre-loader").style.display = "none";
+      }, 2500);
+      // ///////////////////////////
       function show() {
         document.getElementById("navMenu").classList.add("!start-0");
         document.body.classList.add("overflow-hidden");
@@ -1405,6 +1441,18 @@
         document.getElementById("navMenu").classList.remove("!start-0");
         document.body.classList.remove("overflow-hidden");
       }
+      // //////////////////////
+      const topBtn = document.getElementById("topBtn");
+      window.addEventListener("scroll", function scrollFunction() {
+        if (document.documentElement.scrollTop > 100) {
+          topBtn.style.display = "block";
+        } else {
+          topBtn.style.display = "none";
+        }
+      });
+      const backToTop = () => {
+        document.documentElement.scrollTop = 0;
+      };
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script
@@ -1465,6 +1513,60 @@
           // instead of a settings object
         ],
       });
+    </script>
+    <script>
+      $(".responsivesocial").slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        arrows: false,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        infinite: true,
+        autoplaySpeed: 1,
+        speed: 8000,
+        cssEase: "linear",
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true,
+            },
+          },
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            },
+          },
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ],
+      });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true, duration: 600, delay: 100 });
     </script>
   </body>
 </html>
