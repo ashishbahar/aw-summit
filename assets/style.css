@@ -70,3 +70,24 @@
     background: rgba(17, 17, 17, 0.50);
     backdrop-filter: blur(11.5px);
 }
+
+.button_bg_linear:before {
+    content: "";
+    background-color: white;
+    width: 70px;
+    height: 150px;
+    opacity: .4;
+    transform: rotate(20deg);
+    position: absolute;
+    left: -110%;
+    z-index: 1;
+    transition: all .3s linear;
+    top: -20px;
+}
+
+
+.button_bg_linear:hover::before {
+    left: 150% !important;
+    transition-duration: 5s linear;
+}
+
