@@ -8,6 +8,10 @@
     font-family: 'Barlow Condensed', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .button_bg_linear {
     background: var(--Button-Linear, linear-gradient(248deg, #B80FB6 -51.42%, #553581 66.54%));
 }
@@ -85,6 +89,11 @@
     top: -20px;
 }
 
+.img_bg_shadow {
+    border: 0.5px solid #111;
+    background: linear-gradient(0deg, rgba(118, 41, 147, 0.46) 0%, rgba(118, 41, 147, 0.46) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+    box-shadow: 15px 5px 17px 7px rgba(224, 77, 253, 0.12);
+}
 
 .button_bg_linear:hover::before {
     left: 150% !important;
