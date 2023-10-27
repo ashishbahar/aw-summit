@@ -105,7 +105,7 @@
             >
               <img
                 class="cursor-pointer xl:max-w-[200px] max-w-[160px]"
-                src="./assets/images/svg/Logo.svg"
+                src="./assets/images/png/Logo.png"
                 alt="logo"
               />
               <button
@@ -1510,13 +1510,13 @@
               <div class="sm:flex mt-[40px] mb-[40px] sm:mt-[30px]">
                 <input
                   required
-                  class="sm:w-1/2 w-full bg-transparent ff_plus font-normal text-white leading-[120%] text-xs border-[1px] border-[#414040] border-solid h-[54px] me-[8px] outline-none ps-[20px]"
+                  class="sm:w-1/2 w-full bg-transparent ff_plus font-normal text-white leading-[120%] text-xs border-[1px] boder_color border-solid h-[54px] me-[8px] outline-none ps-[20px]"
                   placeholder="YOUR NAME"
                   type="text"
                 />
                 <input
                   required
-                  class="sm:w-1/2 w-full mt-[20px] sm:mt-0 bg-transparent ff_plus font-normal text-white leading-[120%] text-xs border-[1px] border-[#414040] sm:ms-[8px] border-solid h-[54px] outline-none ps-[20px]"
+                  class="sm:w-1/2 w-full mt-[20px] sm:mt-0 bg-transparent ff_plus font-normal text-white leading-[120%] text-xs border-[1px] boder_color sm:ms-[8px] border-solid h-[54px] outline-none ps-[20px]"
                   placeholder="EMAIL ADDRESS"
                   type="email"
                 />
@@ -1525,7 +1525,7 @@
                 <div class="flex items-center">
                   <span
                     onclick="check()"
-                    class="border-[1px] w-[24px] h-[24px] border-solid border-[#414040]"
+                    class="border-[1px] cursor-pointer w-[24px] h-[24px] border-solid boder_color"
                   >
                     <img
                       id="check"
@@ -1535,7 +1535,8 @@
                     />
                   </span>
                   <p
-                    class="ff_plus font-normal leading-[150%] text-xs text-white ms-[8px]"
+                    onclick="check()"
+                    class="ff_plus cursor-pointer font-normal leading-[150%] text-xs text-white ms-[8px]"
                   >
                     I Agree With Terms & Conditions
                   </p>
@@ -1588,9 +1589,9 @@
           >
             <div class="mb-[20px] lg:mt-0">
               <img
-                src="./assets/images/svg/Logo.svg"
+                src="./assets/images/png/Logo.png"
                 alt="logo"
-                class="cursor-pointer mx-auto lg:mx-0"
+                class="cursor-pointer max-w-[200px] mx-auto lg:mx-0"
               />
               <div class="flex max-[370px]:flex-col items-center mt-[16px]">
                 <p
@@ -1765,9 +1766,8 @@
         slidesToScroll: 1,
         autoplay: true,
         infinite: true,
-        autoplaySpeed: 1,
-        speed: 8000,
-        cssEase: "linear",
+        speed: 1500,
+
         responsive: [
           {
             breakpoint: 1200,

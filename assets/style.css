@@ -16,6 +16,10 @@ html {
     background: var(--Button-Linear, linear-gradient(248deg, #B80FB6 -51.42%, #553581 66.54%));
 }
 
+.boder_color {
+    border: rgba(255, 255, 255, 0.20);
+}
+
 .boxshadow_white {
     background: #FFF;
     box-shadow: -4px 17px 39px 0px rgba(0, 0, 0, 0.12);
